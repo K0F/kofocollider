@@ -1,7 +1,7 @@
 
 #Kofocollider
 
-An interface to Supercollider set of livecoding tools for live performances.
+An interface to Supercollider as set of my personal livecoding tools for live performances.
 
 ##requirements
 
