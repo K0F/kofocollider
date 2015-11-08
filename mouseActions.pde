@@ -48,7 +48,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
  */
 
-Connection last;
 
 void mousePressed(){
   for(int i = 0 ; i < envelopes.size();i++){
