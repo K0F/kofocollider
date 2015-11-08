@@ -63,6 +63,10 @@ void mousePressed(){
       connections.add(last);
     }
   }
+
+  if(mouseButton==RIGHT){
+    editor.add(new Editor("syn"+editors.size(),mouseX,mouseY));
+  }
 }
 
 void mouseReleased(){
