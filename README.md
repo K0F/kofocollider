@@ -10,4 +10,11 @@ An interface to Supercollider as set of my personal livecoding tools for live pe
 * Frederick Olofsson's OpenObject Quark [standard quark](https://github.com/supercollider-quarks/OpenObject)
 
 
+#usage
+
+* run Supercollider server
+# install OpenObject quark ie.: ```Quarks.install("OpenObject");```
+* prepare SC for messages [like this](https://raw.githubusercontent.com/K0F/kofocollider/master/openobject.scd)
+* run Kofocollider /w Processing (download here)[http://processing.org]
+
 still in rapid development....
