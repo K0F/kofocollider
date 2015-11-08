@@ -31,6 +31,8 @@ Timeline timeline;
 ArrayList envelopes;
 ArrayList connections;
 
+Connection last;
+
 int currEdit = 0;
 
 
