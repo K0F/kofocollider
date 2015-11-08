@@ -64,7 +64,7 @@ void mousePressed(){
   }
 
   if(mouseButton==RIGHT){
-    editor.add(new Editor("syn"+editors.size(),mouseX,mouseY));
+    editors.add(new Editor("syn"+editors.size(),mouseX,mouseY));
   }
 }
 
