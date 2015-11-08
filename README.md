@@ -3,6 +3,8 @@
 
 An interface to Supercollider as set of my personal livecoding tools for live performances.
 
+![Img Alt](https://i.imgur.com/zi5Yozb.png)
+
 ##requirements
 
 * Processing 1.5+
