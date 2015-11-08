@@ -10,7 +10,7 @@ An interface to Supercollider as set of my personal livecoding tools for live pe
 * Frederick Olofsson's OpenObject Quark [standard quark](https://github.com/supercollider-quarks/OpenObject)
 
 
-#usage
+##usage
 
 * run Supercollider server
 # install OpenObject quark ie.: ```Quarks.install("OpenObject");```
