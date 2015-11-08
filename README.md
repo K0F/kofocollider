@@ -19,7 +19,7 @@ An interface to Supercollider as set of my personal livecoding tools for live pe
 * prepare SC for messages [like this](https://raw.githubusercontent.com/K0F/kofocollider/master/openobject.scd)
 * run Kofocollider /w Processing [download here](http://processing.org)
 
-_this is very early version, there are some temporary shortcuts: CTRL runs curent code, mouse gestures records envelopes, right mouse click casts new editors (this is very punk so far)_
+_this is very early version, there are some temporary shortcuts: CTRL runs curent editor code, mouse gestures records envelopes, right mouse click casts new editors, TAB is for switching between editors (this is very punk so far)_
 
 still in rapid development...
 
