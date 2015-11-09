@@ -172,8 +172,4 @@ void stop(){
    }
  */
 
-void execute(String _in){
-  osc.send("/oo_i",new Object[]{_in},sc);
-}
-
 

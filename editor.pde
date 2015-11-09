@@ -69,16 +69,13 @@ class Editor{
     //prepare arguments line
     String targs = "";
 
-    /*
        for(int i = 0; i < args.length;i++){
-       envelopes.add(new Envelope(this,args[i],i));
 
        if(i==args.length-1)
        targs+=args[i];
        else
        targs+=args[i]+",";
        }
-     */
 
     pre.add("~"+name+".ar(2);");
     pre.add("~"+name+".fadeTime="+fadetime+";");
@@ -111,8 +108,8 @@ class Editor{
 
 
     for(int i = 0; i < args.length;i++){
-      arrr.add((Object)args[i]);
-      arrr.add((Object)vals[i]);
+      arrr.add((Object)(args[i]+""));
+      arrr.add((Object)(float)(vals[i]));
     }
 
     Object complete[] = new Object[arrr.size()];
@@ -204,7 +201,7 @@ class Editor{
 
       String nn = "~"+name+" ";
       while(textWidth(nn)<maxW)
-      nn+="-";
+        nn+="-";
 
       nn+="   V";
 
@@ -267,6 +264,10 @@ class Editor{
     }catch(Exception e){println("editor draw errr!");}
 
 
+  }
+
+  void execute(String _in){
+    osc.send("/oo_i",new Object[]{_in},sc);
   }
 
 }
