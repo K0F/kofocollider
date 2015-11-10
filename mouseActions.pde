@@ -17,41 +17,9 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-
-
-/*
-   void mousePressed(){
-   editors.add(new Editor("syn"+editors.size(),mouseX,mouseY));
-   currEdit = editors.size()-1;
-   }
-
-   void mouseDragged(){
-   println("starting recording of envelope");
-   Editor tmp = (Editor)editors.get(currEdit);
-   Envelope tenv = (Envelope)tmp.envelopes.get(tmp.envelopes.size()-1);
-   tenv.recording = true;
-   }
-
-   void mouseReleased(){
-   Editor tmp = (Editor)editors.get(currEdit);
-   Envelope tenv = (Envelope)tmp.envelopes.get(tmp.envelopes.size()-1);
-
-   try{
-   tenv.recording = false;
-   tenv.recorded = true;
-
-   }catch(Exception e){
-   println("envelope creation err");
-   }
-   }
-
-
- */
-
-
 void mousePressed(){
   for(int i = 0 ; i < envelopes.size();i++){
-    Envelope en  =(Envelope)envelopes.get(i);
+    Envelope en = (Envelope)envelopes.get(i);
     if(en.over){
       en.recording = true;
       en.vals = new ArrayList();

@@ -1,5 +1,4 @@
 /*
-
 Kofocollider interface to SuperCollider written in processing and using OpenObject
 Copyright (C) 2015 Krystof Pesek
 
@@ -23,8 +22,6 @@ import java.io.*;
 
 OscP5 osc;
 NetAddress sc;
-
-//Boid boid;
 
 ArrayList editors;
 Timeline timeline;
@@ -93,8 +90,6 @@ void draw(){
     tmp.draw();
   }
 
-
-
   timeline.render();
 }
 
@@ -116,66 +111,7 @@ void freeAll(){
 
 void stop(){
   saveProject("default.txt");
-  freeAll(); 
+  freeAll();
   super.stop();
 }
-
-/*
-   class Boid{
-   PVector pos,acc,vel;
-   String ctl;
-   ArrayList history;
-   int rew =0;
-   float speed = 10.0;
-
-   Boid(String _ctl){
-   ctl = _ctl;
-   pos = new PVector(width/2,height/2);
-   acc  =new PVector(0,0);
-   vel = new PVector(0,0);
-   history=new ArrayList();
-   }
-
-   void draw(){
-   move(); 
-   fill(0);
-   noStroke();
-   rect(pos.x,pos.y,5,5);
-
-   rew+=speed;
-   rew=rew%history.size();
-   PVector tmp = (PVector)history.get(rew);
-   rect(tmp.x,tmp.y,3,3);
-
-   msg(ctl,"phase",map(tmp.x,0,width,-PI,PI));
-   msg(ctl,"amp",map(tmp.y,0,height,1,0.01));
-
-   beginShape();
-   stroke(0);
-   noFill();
-   for(int i = 0;i<history.size();i++){
-   PVector curr = (PVector)history.get(i);
-   vertex(curr.x,curr.y);
-   }
-   endShape();
-
-   }
-
-   void move(){
-   acc.mult(0.9);
-   vel.mult(0.9);
-   pos.add(vel);
-   vel.add(acc);
-   acc.add(new PVector(random(-0.1,0.1),random(-0.1,0.1)));
-   pos.x=constrain(pos.x,1,width);
-   pos.y=constrain(pos.y,1,height);
-
-   history.add(new PVector(pos.x,pos.y));
-   if(history.size()>1000)
-   history.remove(0);
-   }
-
-   }
- */
-
 
