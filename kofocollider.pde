@@ -47,7 +47,7 @@ void init(){
 
 void setup(){
 
-  size(1600,800,P2D);
+  size(800,870,P2D);
   
   textFont(loadFont("AnonymousPro-11.vlw"),11);
 
@@ -110,7 +110,12 @@ void msg(Object [] data){
   osc.send("/oo",data,sc);
 }
 
+void freeAll(){
+  osc.send("/oo_i",new Object[]{"s.freeAll;"},sc);
+}
+
 void stop(){
+  freeAll(); 
   super.stop();
 }
 
