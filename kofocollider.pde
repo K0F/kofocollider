@@ -115,6 +115,7 @@ void freeAll(){
 }
 
 void stop(){
+  saveProject("default.txt");
   freeAll(); 
   super.stop();
 }
