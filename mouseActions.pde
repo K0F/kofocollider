@@ -75,6 +75,7 @@ void mouseReleased(){
     en.recording = false;
   }
 
+  boolean hit = false;
   try{
     if(last!=null && !last.done)
       for(int i = 0 ; i < editors.size();i++){
@@ -82,12 +83,17 @@ void mouseReleased(){
         int field = ed.fieldOver();
         if(field>-1){
           println("detected field over "+ed.fieldOver());
-          if(!last.done)
+          if(!last.done){
             last.connectTo(ed,field);
+            hit = true;
+          }
         }
       }
   }catch(Exception e){
     println("connection err "+e);
   };
+
+  if(!hit)
+  connections.remove(last);
 }
 
